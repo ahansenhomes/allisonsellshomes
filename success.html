@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Message Received | Allison Sells Homes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #1a3a2a;
+    --green-mid: #2c5c42;
+    --cream: #f5f0e8;
+    --cream-dark: #ede6d6;
+    --gold: #c9a84c;
+    --gold-light: #e2c87a;
+    --white: #ffffff;
+    --text: #1a1a18;
+    --text-mid: #4a4a44;
+    --text-light: #7a7a72;
+    --border-gold: rgba(201,168,76,0.3);
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+    --radius: 4px;
+    --radius-lg: 8px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--cream);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav {
+    background: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    height: 64px;
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+  }
+
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 18px;
+    color: var(--cream);
+    letter-spacing: 0.01em;
+    text-decoration: none;
+  }
+
+  .nav-logo span { color: var(--gold); }
+
+  main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 24px;
+  }
+
+  .card {
+    background: var(--white);
+    border: 1px solid rgba(26,58,42,0.12);
+    border-radius: var(--radius-lg);
+    padding: 56px 48px;
+    max-width: 520px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .check-circle {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: rgba(201,168,76,0.12);
+    border: 2px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 28px;
+  }
+
+  .check-circle svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--green);
+    margin-bottom: 14px;
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    color: var(--text-mid);
+    line-height: 1.65;
+    margin-bottom: 36px;
+  }
+
+  .divider {
+    width: 48px;
+    height: 2px;
+    background: var(--gold);
+    margin: 0 auto 36px;
+  }
+
+  .redirect-msg {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-bottom: 24px;
+  }
+
+  .countdown {
+    font-weight: 500;
+    color: var(--green);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 28px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    background: var(--green);
+    color: var(--cream);
+    transition: background 0.22s ease;
+  }
+
+  .btn:hover { background: var(--green-mid); }
+
+  .progress-bar {
+    width: 100%;
+    height: 3px;
+    background: var(--cream-dark);
+    border-radius: 2px;
+    margin-top: 28px;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: var(--gold);
+    border-radius: 2px;
+    width: 100%;
+    transform-origin: left;
+    animation: drain 5s linear forwards;
+  }
+
+  @keyframes drain {
+    from { transform: scaleX(1); }
+    to   { transform: scaleX(0); }
+  }
+
+  footer {
+    background: var(--green);
+    padding: 20px 40px;
+    text-align: center;
+    border-top: 1px solid rgba(201,168,76,0.2);
+  }
+
+  footer p {
+    font-size: 12px;
+    color: rgba(245,240,232,0.35);
+  }
+
+  @media (max-width: 600px) {
+    .card { padding: 40px 28px; }
+    h1 { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Allison <span>Sells</span> Homes</a>
+</nav>
+
+<main>
+  <div class="card">
+    <div class="check-circle">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polyline points="6,17 13,24 26,9" stroke="#c9a84c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <h1>Message received!</h1>
+    <div class="divider"></div>
+    <p class="subtitle">Thanks for reaching out. Allison typically responds within a few hours — 7 days a week. You'll hear from her soon.</p>
+
+    <p class="redirect-msg">Returning to the home page in <span class="countdown" id="countdown">5</span> seconds…</p>
+    <a href="/" class="btn">← Back to home</a>
+
+    <div class="progress-bar">
+      <div class="progress-fill"></div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 Allison Hansen. RE/MAX Alliance, Glen Carbon, IL. License #475.132447. Equal Housing Opportunity.</p>
+</footer>
+
+<script>
+  let seconds = 5;
+  const el = document.getElementById('countdown');
+  const timer = setInterval(() => {
+    seconds--;
+    el.textContent = seconds;
+    if (seconds <= 0) {
+      clearInterval(timer);
+      window.location.href = '/';
+    }
+  }, 1000);
+</script>
+
+</body>
+</html>

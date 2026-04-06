@@ -1565,7 +1565,7 @@
           <span class="section-label">Send a message</span>
           <h2 style="margin-bottom: 8px;">Let's connect</h2>
           <div class="gold-line"></div>
-          <form id="contact-form" name="contact" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
+          <form id="contact-form" name="contact" method="POST" action="/success" data-netlify="true" netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="contact">
             <p style="display:none;"><input name="bot-field"></p>
             <div class="form-group">
@@ -1693,7 +1693,7 @@
           <div class="card-cream" style="margin-bottom: 20px;">
             <h4 style="font-family: var(--serif); font-size: 18px; color: var(--green); margin-bottom: 8px;">¿Lista para comenzar?</h4>
             <p style="font-size: 14px; margin-bottom: 20px;">Llame, envíe un mensaje de texto, o complete el formulario — Allison responde rápidamente, 7 días a la semana.</p>
-            <form id="espanol-form" name="contact-espanol" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
+            <form id="espanol-form" name="contact-espanol" method="POST" action="/success" data-netlify="true" netlify-honeypot="bot-field">
               <input type="hidden" name="form-name" value="contact-espanol">
               <p style="display:none;"><input name="bot-field"></p>
               <div class="form-group">
@@ -1954,8 +1954,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.disabled = true;
       try {
         await submitNetlifyForm(contactForm);
-        contactForm.style.display = 'none';
-        success.style.display = 'block';
+        window.location.href = '/success';
       } catch {
         btn.textContent = 'Send message';
         btn.disabled = false;
@@ -1974,8 +1973,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.disabled = true;
       try {
         await submitNetlifyForm(espanolForm);
-        espanolForm.style.display = 'none';
-        success.style.display = 'block';
+        window.location.href = '/success';
       } catch {
         btn.textContent = 'Enviar mensaje';
         btn.disabled = false;
